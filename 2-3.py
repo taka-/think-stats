@@ -8,7 +8,7 @@ def Mode(hist):
 def AllModes(hist):
     " Return all values with sorted order by desc"
     getcount = itemgetter(1)
-    return sorted(hist.Items(), key=getcount)
+    return sorted(hist.Items(), key=getcount, reverse = True)
 
 hist = Pmf.MakeHistFromList([1,2, 2, 3, 3, 3, 5])
 print Mode(hist)
